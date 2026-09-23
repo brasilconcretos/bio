@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brasil Concretos — Links</title>
+<meta name="description" content="Brasil Concretos — qualidade, transparência e precisão em cada etapa. Fale com a nossa equipe e conheça nossos serviços.">
+<meta name="theme-color" content="#1B3E7A">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<!-- Pré-visualização ao compartilhar o link (WhatsApp, Instagram, etc.) -->
+<!-- Troque SEU-USUARIO e NOME-DO-REPOSITORIO pelos dados reais do GitHub Pages -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Brasil Concretos — Links">
+<meta property="og:description" content="Um novo jeito de fazer concreto. Qualidade, transparência e precisão em cada etapa.">
+<meta property="og:image" content="https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/assets/logo.png">
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1B3E7A;
+    --blue:#2E6DA8;
+    --green:#2FA84C;
+    --yellow:#F5B800;
+    --gradient:linear-gradient(90deg,#1B3E7A 0%,#2E6DA8 28%,#2FA84C 62%,#F5B800 100%);
+    --ink:#16283D;
+    --ink-dim:#5A6B80;
+    --white:#FFFFFF;
+    --line:rgba(22,40,61,0.10);
+    --bg:#F4F5F7;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;min-height:100%}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    padding:calc(32px + env(safe-area-inset-top,0px)) 16px calc(32px + env(safe-area-inset-bottom,0px));
+    position:relative;
+    overflow-x:hidden;
+    background:var(--bg);
+  }
+
+  .backdrop{
+    position:fixed;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+    background:
+      radial-gradient(55% 45% at 85% 8%, rgba(245,184,0,0.14), transparent 60%),
+      radial-gradient(55% 45% at 8% 95%, rgba(27,62,122,0.10), transparent 60%),
+      var(--bg);
+  }
+
+  .stage{position:relative;z-index:1;width:100%;max-width:640px;display:flex;flex-direction:column;align-items:center}
+
+  .card{
+    width:100%;
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:24px;
+    padding:56px 46px 44px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 14px 36px rgba(22,40,61,0.09);
+  }
+  .card::before{
+    content:"";
+    position:absolute;
+    top:0;left:0;right:0;
+    height:6px;
+    background:var(--gradient);
+  }
+
+  .brand{display:flex;flex-direction:column;align-items:center;text-align:center;margin-bottom:32px}
+
+  .logo{
+    width:168px;
+    height:168px;
+    border-radius:50%;
+    margin-bottom:20px;
+    opacity:0;
+    animation:rise 0.6s ease-out 0.15s forwards;
+  }
+  .logo img{width:100%;height:100%;display:block;object-fit:contain}
+
+  .tagline{
+    font-family:'Inter',sans-serif;
+    font-weight:500;
+    font-size:18.5px;
+    line-height:1.55;
+    color:var(--ink-dim);
+    max-width:420px;
+    margin:0;
+    opacity:0;
+    animation:rise 0.6s ease-out 0.35s forwards;
+  }
+  .tagline strong{color:var(--ink);font-weight:600}
+
+  @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+  .links{display:flex;flex-direction:column;gap:12px}
+
+  .btn{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:22px 26px;
+    text-decoration:none;
+    border-radius:14px;
+    opacity:0;
+    animation:rise 0.55s ease-out forwards;
+  }
+  .links .btn:nth-child(1){animation-delay:0.5s}
+  .links .btn:nth-child(2){animation-delay:0.58s}
+  .links .btn:nth-child(3){animation-delay:0.66s}
+  .links .btn:nth-child(4){animation-delay:0.74s}
+  .links .btn:nth-child(5){animation-delay:0.82s}
+
+  .btn .mark{flex:0 0 auto;width:8px;height:8px;border-radius:2px;background:currentColor;opacity:0.85}
+  .btn .text{text-align:left}
+  .btn .title{
+    font-family:'Montserrat',sans-serif;
+    font-weight:700;
+    font-size:17px;
+    letter-spacing:0.01em;
+  }
+  .btn .arrow{margin-left:auto;flex:0 0 auto;width:18px;height:18px;opacity:0.8;transition:transform 0.2s ease}
+  .btn:hover .arrow{transform:translateX(3px)}
+  .btn:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+
+  .btn-primary{background:var(--gradient);color:#fff}
+  .btn-primary .mark{background:#fff}
+
+  .btn-outline{
+    background:transparent;
+    border:1.4px solid var(--line);
+    color:var(--navy);
+    transition:border-color 0.2s ease, background 0.2s ease;
+  }
+  .btn-outline .mark{background:var(--blue)}
+  .btn-outline:hover{border-color:var(--blue);background:rgba(46,109,168,0.06)}
+
+  .card-footer{
+    margin-top:28px;
+    padding-top:18px;
+    border-top:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    opacity:0;
+    animation:rise 0.55s ease-out 0.95s forwards;
+  }
+  .card-footer .loc{
+    font-family:'Montserrat',sans-serif;
+    font-size:10.5px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--ink-dim);
+  }
+  .card-footer .dot{width:3px;height:3px;border-radius:50%;background:var(--yellow)}
+
+  @media (max-width:480px){
+    body{padding-left:0;padding-right:0}
+    .stage{max-width:100%}
+    .card{
+      min-height:calc(100vh - 64px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));
+      border-radius:0;
+      border-left:none;
+      border-right:none;
+      padding:52px 24px 32px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+    .logo{width:150px;height:150px}
+    .tagline{font-size:17.5px}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .logo,.tagline,.btn,.card-footer{animation:none;opacity:1}
+  }
+</style>
+</head>
+<body>
+
+  <div class="backdrop"></div>
+
+  <div class="stage">
+    <div class="card">
+
+      <div class="brand">
+        <div class="logo"><img src="assets/logo.png" alt="Brasil Concretos"></div>
+        <p class="tagline">Um novo jeito de fazer concreto.<br><strong>Qualidade, transparência e precisão</strong> em cada etapa.</p>
+      </div>
+
+      <nav class="links">
+
+        <a class="btn btn-primary" href="https://wa.me/5583900000000?text=Ol%C3%A1!%20Quero%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+          <span class="mark"></span>
+          <span class="text"><span class="title">Solicitar orçamento</span></span>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 6l6 6-6 6"/></svg>
+        </a>
+
+        <!-- TODO: trocar o "#" abaixo pelo link real dos produtos (catálogo, site, Instagram...) -->
+        <a class="btn btn-outline" href="#" target="_blank" rel="noopener">
+          <span class="mark"></span>
+          <span class="text"><span class="title">Conheça nossos produtos</span></span>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 6l6 6-6 6"/></svg>
+        </a>
+
+        <a class="btn btn-outline" href="https://wa.me/5583900000000?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20equipe." target="_blank" rel="noopener">
+          <span class="mark"></span>
+          <span class="text"><span class="title">Fale com a equipe pelo WhatsApp</span></span>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 6l6 6-6 6"/></svg>
+        </a>
+
+      </nav>
+
+      <div class="card-footer">
+        <span class="loc">Campina Grande — PB</span>
+        <span class="dot"></span>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
